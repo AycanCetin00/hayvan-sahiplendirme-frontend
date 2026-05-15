@@ -1,0 +1,653 @@
+/* Ilanlarim.css */
+
+.ilanlar-page {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ilanlar-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ilanlar-header h1 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.ilanlar-header p {
+  color: #7f8c8d;
+  font-size: 1rem;
+}
+
+/* Grid layout for cards */
+.ilanlar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 25px;
+}
+
+/* Card styling */
+.ilan-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.ilan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Image styling - FIXED */
+.ilan-card-image {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pet-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the image covers the container without distortion */
+}
+
+.no-image {
+  height: 100%;
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #95a5a6;
+  font-size: 1rem;
+}
+
+/* Status Badge */
+.status-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.status-available {
+  background-color: #2ecc71;
+}
+
+.status-adopted {
+  background-color: #e74c3c;
+}
+
+.status-pending {
+  background-color: #f39c12;
+}
+
+.status-lost {
+  background-color: #9b59b6;
+}
+
+.status-found {
+  background-color: #3498db;
+}
+
+.ilan-card-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pet-name {
+  font-size: 1.5rem;
+  color: #3498db;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.ilan-details, .health-details, .habits-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.detail-item {
+  margin-bottom: 5px;
+}
+
+.label {
+  font-weight: 600;
+  color: #7f8c8d;
+  margin-right: 5px;
+  font-size: 0.85rem;
+}
+
+.value {
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+/* Accordion styling */
+.accordion-sections {
+  margin-top: 15px;
+}
+
+.accordion-item {
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  padding: 12px 15px;
+  background-color: #f8f8f8;
+  font-weight: 600;
+  color: #3498db;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+  background-color: #f0f7fc;
+}
+
+.accordion-header:after {
+  content: "+";
+  font-size: 1.2rem;
+  position: absolute;
+  right: 15px;
+}
+
+details[open] .accordion-header:after {
+  content: "-";
+}
+
+.accordion-content {
+  padding: 15px;
+  background-color: #ffffff;
+  border-top: 1px solid #eaeaea;
+}
+
+.ilan-description p, .additional-info p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.additional-info h4 {
+  font-size: 1rem;
+  color: #34495e;
+  margin: 10px 0 5px 0;
+}
+
+.ilan-info {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #f0f7fc;
+  border-radius: 5px;
+}
+
+.contact-item {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.email-icon::before {
+  content: "✉️";
+}
+
+.phone-icon::before {
+  content: "📞";
+}
+
+.ilan-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #2980b9;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+/* Loading spinner */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error styling */
+.error-container {
+  text-align: center;
+  padding: 40px;
+  background-color: #fff9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #e74c3c;
+}
+
+.retry-button {
+  background-color: #3498db;
+  color: white;
+  margin-top: 15px;
+}
+
+.retry-button:hover {
+  background-color: #2980b9;
+}
+
+/* No ilanlar styling */
+.no-ilanlar {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.no-data-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #95a5a6;
+}
+
+.create-ilan-button {
+  background-color: #2ecc71;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.create-ilan-button:hover {
+  background-color: #27ae60;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ilanlar-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ilan-details, .health-details, .habits-details {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sağlık ve kaza detayları için CSS eklentileri */
+
+.health-issue-detail {
+  margin-top: 5px;
+  padding-left: 10px;
+  border-left: 2px solid #e0e0e0;
+  position: relative;
+}
+
+.health-issue-detail::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+}
+
+.health-value.health-detail {
+  display: block;
+  margin-top: 3px;
+  font-style: italic;
+  color: #666;
+  padding: 5px;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+}
+
+/* Sağlık değeri stil renklendirmeleri */
+.health-value.yes {
+  color: #4caf50;
+  font-weight: 500;
+}
+
+.health-value.no {
+  color: #f44336;
+}
+/* Geliştirilmiş Modal Stilleri */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.edit-modal {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 550px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.3s ease-out;
+  scrollbar-width: thin;
+  scrollbar-color: #d4d4d4 #f4f4f4;
+}
+
+.edit-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.edit-modal::-webkit-scrollbar-track {
+  background: #f4f4f4;
+  border-radius: 10px;
+}
+
+.edit-modal::-webkit-scrollbar-thumb {
+  background-color: #d4d4d4;
+  border-radius: 10px;
+  border: 2px solid #f4f4f4;
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.edit-modal h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+  color: #2D3748;
+  font-weight: 600;
+  border-bottom: 2px solid #F0F4F8;
+  padding-bottom: 12px;
+}
+
+/* Modal içindeki X butonu için özel stil */
+.edit-modal .close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #718096;
+  transition: color 0.2s ease;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.edit-modal .close-button:hover {
+  color: #E53E3E;
+  background-color: #FED7D7;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.form-group {
+  margin-bottom: 22px;
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #4A5568;
+  font-size: 0.95rem;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background-color: #F7FAFC;
+  color: #2D3748;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3182CE;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+  background-color: #ffffff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.health-section {
+  background-color: #F7FAFC;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  border: 1px solid #E2E8F0;
+}
+
+.health-section h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  color: #2D3748;
+  font-weight: 500;
+}
+
+.checkboxes-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  padding: 6px 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #4CAF50;
+}
+
+.health-issue-details {
+  margin-top: 16px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.health-issue-details textarea {
+  background-color: #ffffff;
+}
+
+/* Modal eylem butonları için stiller */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #E2E8F0;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-size: 0.95rem;
+  min-width: 100px;
+  color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+
+
+
+/* Kaydet butonu */
+.modal-actions button[type="submit"],
+.modal-actions .kaydet-button,
+button.kaydet {
+  background-color: #38A169;
+  color: white;
+  border-radius: 6px;
+}
+
+.modal-actions button[type="submit"]:hover,
+.modal-actions .kaydet-button:hover,
+button.kaydet:hover {
+  background-color: #2F855A;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 480px) {
+  .modal-actions {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  
+  .modal-actions button {
+    width: 100%;
+  }
+}

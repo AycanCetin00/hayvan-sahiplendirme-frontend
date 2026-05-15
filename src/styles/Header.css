@@ -1,0 +1,226 @@
+
+
+.header {
+  background: #b6cfc0;
+  padding: 5px 0;
+  text-align: center;
+  color: #4F6D7A;
+}
+  
+  .top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 5px 10px;
+  }
+  
+
+
+  .logo-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4F6D7A;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+
+
+  .auth-btn {
+    background-color: #4F6D7A;
+    color: #FAF9F6;
+    font-size: 14px;
+    border: 2px solid #4F6D7A;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .auth-btn:hover {
+    background-color: #4F6D7A;
+    color: #FAF9F6;
+  }
+  
+  /* Navigasyon Çubuğu */
+
+
+  .nav-container {
+    background-color: #f8f5ec;
+    padding: 7px 0;
+    margin-bottom: -10px;
+  }
+  
+
+  .nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav li {
+    margin: 0 15px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #8EACCD;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav a:hover {
+    color: #6b90b8;
+  }
+ 
+.hero {
+    background: linear-gradient(135deg, #4F6D7A, #D2E0FB);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .hero h2 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .hero-slogan {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+  
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo {
+    width: 92px;
+    max-width: 20vw;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .logo-text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .logo-text {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #4F6D7A;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .logo-subtext {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+    color: #6b7f88;
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+  @media (max-width: 768px) {
+    .top-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+  
+    .auth-buttons {
+        margin-top: 10px;
+    }
+  
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+      width: 78px;
+    }
+
+    .logo-text {
+      font-size: 1.6rem;
+    }
+
+    .logo-subtext {
+      font-size: 0.68rem;
+    }
+}
+
+
+
+
+/* Kullanıcı avatarı için yuvarlak buton */
+.avatar-btn {
+  background-color: #4F6D7A; /* Mavi renk */
+  color: white; /* Siyah yazı rengi */
+  border: none;
+  border-radius: 30; /* Yuvarlak şekil */
+  width: 100px; /* Buton boyutunu biraz büyüttüm */
+  height: 40px; /* Buton boyutunu biraz büyüttüm */
+  font-size: 20px; /* Font boyutunu artırdım */
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Butonun içeriğini ortaladım */
+}
+
+/* Dropdown menü */
+.dropdown-menu {
+  position: absolute;
+  top: 60px; /* avatar'ın hemen altına */
+  right: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  width: 200px;
+  z-index: 999;
+}
+
+/* Menü içindeki linkler */
+.dropdown-menu li {
+  list-style: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: black; /* Siyah yazı rengi */
+
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f2f2f2;
+}

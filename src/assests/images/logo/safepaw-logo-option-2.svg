@@ -1,0 +1,26 @@
+<svg width="920" height="260" viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">SafePaw Logo Option 2</title>
+  <desc id="desc">Clean circular paw emblem and modern wordmark</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f3faf8"/>
+      <stop offset="100%" stop-color="#dcefe9"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(24 24)">
+    <circle cx="106" cy="106" r="102" fill="url(#bg)" stroke="#2f8f83" stroke-width="8"/>
+    <circle cx="74" cy="70" r="15" fill="#2f8f83"/>
+    <circle cx="138" cy="70" r="15" fill="#2f8f83"/>
+    <circle cx="54" cy="106" r="13" fill="#2f8f83"/>
+    <circle cx="158" cy="106" r="13" fill="#2f8f83"/>
+    <path d="M83 113c-16 0-29 13-29 29s13 29 29 29h46c16 0 29-13 29-29s-13-29-29-29H83z" fill="#ff9d42"/>
+    <path d="M106 56l34 17v28c0 19-15 34-34 34s-34-15-34-34V73l34-17z" fill="#2F3E46" opacity="0.16"/>
+  </g>
+
+  <g transform="translate(270 86)">
+    <text x="0" y="68" fill="#2F3E46" font-size="82" font-family="Montserrat, Segoe UI, Arial, sans-serif" font-weight="800" letter-spacing="0.8">SafePaw</text>
+    <rect x="2" y="80" width="330" height="6" rx="3" fill="#2f8f83"/>
+    <text x="4" y="116" fill="#4A5B62" font-size="24" font-family="Montserrat, Segoe UI, Arial, sans-serif" font-weight="600" letter-spacing="2.4">GUVENLI YUVA BULUSTURMA</text>
+  </g>
+</svg>

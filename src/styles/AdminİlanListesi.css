@@ -1,0 +1,708 @@
+/* src/styles/AdminİlanListesi.css */
+
+:root {
+  --primary-color: #4a6fa5;
+  --primary-light: #6e8ec7;
+  --primary-dark: #3a587c;
+  --secondary-color: #5e8b7e;
+  --accent-color: #f7a072;
+  --light-grey: #f5f5f7;
+  --mid-grey: #e2e2e7;
+  --dark-grey: #6e6e73;
+  --text-color: #333;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --border-radius: 10px;
+  --transition: all 0.2s ease-in-out;
+}
+
+/* src/styles/AdminİlanListesi.css */
+
+:root {
+  --primary-color: #4a6fa5;
+  --primary-light: #6e8ec7;
+  --primary-dark: #3a587c;
+  --secondary-color: #5e8b7e;
+  --accent-color: #f7a072;
+  --light-grey: #f5f5f7;
+  --mid-grey: #e2e2e7;
+  --dark-grey: #6e6e73;
+  --text-color: #333;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --border-radius: 12px;
+  --transition: all 0.2s ease-in-out;
+}
+
+.ilan-listesi-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  color: var(--text-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-icon {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+/* Filtreleme Düğmeleri */
+.ilan-filtre {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 18px;
+  background-color: var(--light-grey);
+  border: none;
+  border-radius: 8px;
+  color: var(--dark-grey);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-btn:hover {
+  background-color: var(--mid-grey);
+}
+
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.count {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 2px 8px;
+  font-size: 12px;
+  min-width: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.filter-btn.active .count {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Search bar (bottom) styles */
+.search-bar-bottom {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+  padding: 14px;
+  background: linear-gradient(180deg, rgba(250,250,252,0.6), rgba(245,247,250,0.6));
+  border-radius: 12px;
+  border: 1px solid var(--mid-grey);
+}
+
+.owner-search-input {
+  flex: 1 1 auto;
+  min-width: 220px;
+  padding: 10px 14px;
+  border: 1px solid #e6e9ee;
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--text-color);
+  background: white;
+  box-shadow: 0 1px 4px rgba(18, 38, 63, 0.03) inset;
+}
+
+.owner-search-input:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 4px 18px rgba(74,111,165,0.08);
+}
+
+.owner-search-btn {
+  padding: 10px 14px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(74,111,165,0.12);
+}
+
+.owner-search-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.owner-search-clear {
+  padding: 8px 12px;
+  background: transparent;
+  border: 1px solid #e8eaef;
+  color: var(--dark-grey);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.owner-search-clear:hover {
+  background: #fff;
+  border-color: #dfe4eb;
+}
+
+@media (max-width: 700px) {
+  .search-bar-bottom {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .owner-search-btn, .owner-search-clear {
+    width: 100%;
+  }
+}
+
+/* İlan Kartları */
+.ilan-listesi {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 600px), 1fr));
+  gap: 24px;
+}
+
+.ilan-karti {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: var(--transition);
+  border: 1px solid var(--mid-grey);
+}
+
+.ilan-karti:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.ilan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--light-grey);
+  border-bottom: 1px solid var(--mid-grey);
+}
+
+.ilan-id {
+  font-size: 12px;
+  color: var(--dark-grey);
+  font-weight: 500;
+}
+
+.ilan-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ilan-durum {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-icon {
+  font-size: 14px;
+}
+
+.status-adopted {
+  background-color: #e6f7e9;
+  color: #2e7d32;
+}
+
+.status-pending {
+  background-color: #fff8e1;
+  color: #ff8f00;
+}
+
+.status-rejected {
+  background-color: #fce8e6;
+  color: #d32f2f;
+}
+
+.status-available {
+  background-color: #e1f5fe;
+  color: #0277bd;
+}
+
+.delete-btn {
+  background-color: #fce8e6;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: #d32f2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.delete-btn:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.ilan-content {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .ilan-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ilan-resim-container {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ilan-resmi {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ilan-resim-placeholder {
+  width: 100%;
+  height: 180px;
+  background-color: var(--light-grey);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-icon {
+  font-size: 48px;
+  color: var(--mid-grey);
+}
+
+.ilan-detay {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pet-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin: 0 0 8px 0;
+}
+
+.ilan-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.info-item {
+  flex: 1;
+  min-width: 150px;
+}
+
+.info-label {
+  font-weight: 600;
+  color: var(--dark-grey);
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.info-value {
+  color: var(--text-color);
+}
+
+.ilan-flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.flag {
+  background-color: var(--light-grey);
+  color: var(--primary-color);
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.description-section {
+  margin-top: 10px;
+}
+
+.description-text {
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.kullanici-bilgileri {
+  grid-column: 1 / -1;
+  background-color: var(--light-grey);
+  padding: 16px;
+  margin-top: 16px;
+  border-radius: 8px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: var(--primary-dark);
+}
+
+.kullanici-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Yükleniyor Göstergesi */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--mid-grey);
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  margin-top: 16px;
+  color: var(--dark-grey);
+  font-weight: 500;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hata Mesajı */
+.error-message {
+  background-color: #fce8e6;
+  color: #d32f2f;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+/* Sonuç Yok */
+.no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: var(--light-grey);
+  border-radius: var(--border-radius);
+  padding: 32px;
+  text-align: center;
+  color: var(--dark-grey);
+}
+
+.no-results-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: var(--primary-light);
+}
+
+/* Modal Stil */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 24px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+  font-size: 20px;
+  margin: 0 0 16px 0;
+  color: var(--text-color);
+}
+
+.modal-warning {
+  color: #d32f2f;
+  font-weight: 600;
+  margin: 16px 0;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* İptal Butonu - Yumuşacık pastel gri */
+.cancel-btn {
+  padding: 10px 18px;
+  background-color: #f1f3f5;
+  border: none;
+  border-radius: 12px;
+  color: #495057;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #e0e0e0;
+  color: #212529;
+}
+
+.modal-buttons .delete-btn {
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #ff6b6b, #ff4757);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.3);
+  transition: all 0.3s ease;
+}
+
+.modal-buttons .delete-btn:hover {
+  background: linear-gradient(135deg, #ff8787, #ff6b6b);
+  box-shadow: 0 4px 10px rgba(255, 71, 87, 0.4);
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.delete-btn {
+  display: inline-flex !important;
+  color: #e63946;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+/* Kullanıcı bilgileri - Yenilenmiş tasarım */
+.kullanici-bilgileri-container {
+  display: flex;
+  gap: 20px;
+  padding: 16px;
+  flex-wrap: wrap;
+  border-top: 1px solid #eee;
+  background-color: #fafafa;
+}
+
+.kullanici-bilgisi-kart {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  transition: all 0.2s ease;
+}
+
+.kullanici-bilgisi-kart:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.kullanici-bilgisi-kart.sahip .kullanici-bilgisi-baslik {
+  background-color: #f0f7ff;
+  color: #3182ce;
+}
+
+.kullanici-bilgisi-kart.sahiplenen .kullanici-bilgisi-baslik {
+  background-color: #f9eef9;
+  color: #9f7aea;
+}
+
+.kullanici-bilgisi-baslik {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.kullanici-icon {
+  font-size: 1.2rem;
+}
+
+.kullanici-bilgisi-baslik h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.kullanici-bilgileri-icerik {
+  padding: 12px 16px;
+}
+
+.kullanici-bilgi-item {
+  display: flex;
+  margin-bottom: 8px;
+  align-items: baseline;
+}
+
+.kullanici-bilgi-item:last-child {
+  margin-bottom: 0;
+}
+
+.kullanici-label {
+  min-width: 90px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.kullanici-deger {
+  font-weight: 500;
+  color: #333;
+}
+
+
+/* AdminİlanListesi.css dosyasına ekleyin */
+.delete-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #ff6b81;
+}
+
+.delete-btn svg {
+  font-size: 14px;
+}
+
+.ilan-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* Modal Overlay - Stilize ve ortama uygun */
+.modal-overlay {
+  position: fixed;
+  inset: 0; /* top, right, bottom, left = 0 */
+  background-color: rgba(0, 0, 0, 0.6); /* Hafif koyulaştırma */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 100px;
+  z-index: 1000;
+  backdrop-filter: blur(3px); /* Arka planı bulanıklaştır, odak efekti */
+}
+
+/* Modal İçeriği - Sevimli ama profesyonel */
+.modal-content {
+  background-color: #fffdf9; /* Çok hafif kırık beyaz, sıcak bir his */
+  border-radius: 16px;
+  padding: 32px 24px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.3s ease-out;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Animasyon - Aşağıdan yumuşak giriş */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close butonu (istersen) */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: #e74c3c;
+}

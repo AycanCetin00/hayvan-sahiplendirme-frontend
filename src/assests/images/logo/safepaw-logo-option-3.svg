@@ -1,0 +1,19 @@
+<svg width="920" height="260" viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">SafePaw Logo Option 3</title>
+  <desc id="desc">Shield icon with minimal paw and strong horizontal brand lockup</desc>
+
+  <g transform="translate(26 20)">
+    <path d="M104 6l84 38v74c0 58-36 95-84 112-48-17-84-54-84-112V44l84-38z" fill="#2F3E46"/>
+    <path d="M104 20l68 31v63c0 48-28 79-68 95-40-16-68-47-68-95V51l68-31z" fill="#2f8f83"/>
+    <circle cx="79" cy="76" r="11" fill="#ffffff"/>
+    <circle cx="129" cy="76" r="11" fill="#ffffff"/>
+    <circle cx="63" cy="102" r="9" fill="#ffffff"/>
+    <circle cx="145" cy="102" r="9" fill="#ffffff"/>
+    <path d="M88 113c-11 0-19 8-19 19s8 19 19 19h32c11 0 19-8 19-19s-8-19-19-19H88z" fill="#ffbf66"/>
+  </g>
+
+  <g transform="translate(250 76)">
+    <text x="0" y="76" fill="#2F3E46" font-size="92" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="900" letter-spacing="1">SafePaw</text>
+    <text x="4" y="116" fill="#2f8f83" font-size="28" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="700" letter-spacing="1.6">SAHIPLENDIRMEDE GUVEN VE SEVGI</text>
+  </g>
+</svg>

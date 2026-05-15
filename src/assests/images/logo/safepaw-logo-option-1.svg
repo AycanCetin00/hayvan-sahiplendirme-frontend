@@ -1,0 +1,30 @@
+<svg width="920" height="260" viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">SafePaw Logo Option 1</title>
+  <desc id="desc">Rounded paw icon with shield and wordmark</desc>
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#2f8f83"/>
+      <stop offset="100%" stop-color="#3f5b66"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffc66b"/>
+      <stop offset="100%" stop-color="#ff9d42"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(24 24)">
+    <rect x="0" y="0" width="212" height="212" rx="44" fill="url(#g1)"/>
+    <path d="M106 44c20 0 36 16 36 36v18h10c6 0 11 5 11 11v27c0 36-29 65-65 65S33 172 33 136v-27c0-6 5-11 11-11h10V80c0-20 16-36 36-36h16z" fill="#ffffff" opacity="0.95"/>
+    <circle cx="74" cy="82" r="12" fill="url(#g2)"/>
+    <circle cx="138" cy="82" r="12" fill="url(#g2)"/>
+    <circle cx="54" cy="112" r="10" fill="url(#g2)"/>
+    <circle cx="158" cy="112" r="10" fill="url(#g2)"/>
+    <path d="M88 123c-11 0-20 9-20 20s9 20 20 20h36c11 0 20-9 20-20s-9-20-20-20H88z" fill="#2f8f83"/>
+    <path d="M106 56l36 18v34c0 20-16 36-36 36s-36-16-36-36V74l36-18z" fill="#ffffff" opacity="0.23"/>
+  </g>
+
+  <g transform="translate(270 84)">
+    <text x="0" y="74" fill="#2F3E46" font-size="86" font-family="Poppins, Segoe UI, Arial, sans-serif" font-weight="700" letter-spacing="1.2">SafePaw</text>
+    <text x="4" y="112" fill="#5C6D74" font-size="26" font-family="Poppins, Segoe UI, Arial, sans-serif" font-weight="500" letter-spacing="1.8">HAYVAN SAHIPLENDIRME PLATFORMU</text>
+  </g>
+</svg>

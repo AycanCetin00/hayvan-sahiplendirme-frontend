@@ -1,0 +1,16 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">SafePaw Heart Icon</title>
+  <desc id="desc">Heart shaped pet logo icon with paw print and transparent background</desc>
+
+  <path d="M256 454C238 438 96 320 96 198C96 126 148 72 218 72C247 72 274 84 294 103C314 84 341 72 370 72C440 72 492 126 492 198C492 320 350 438 332 454L294 486C275 502 247 502 228 486L256 454Z" fill="#3c8a67"/>
+  <path d="M256 434C240 420 118 315 118 202C118 138 165 90 228 90C251 90 272 98 290 113C308 98 329 90 352 90C415 90 462 138 462 202C462 315 340 420 324 434L290 462C275 474 257 474 242 462L256 434Z" fill="none" stroke="#fff6de" stroke-width="18" stroke-linejoin="round"/>
+
+  <g fill="#fff6de">
+    <ellipse cx="256" cy="191" rx="26" ry="54"/>
+    <ellipse cx="200" cy="212" rx="22" ry="48" transform="rotate(-22 200 212)"/>
+    <ellipse cx="312" cy="212" rx="22" ry="48" transform="rotate(22 312 212)"/>
+    <ellipse cx="225" cy="150" rx="18" ry="36" transform="rotate(-10 225 150)"/>
+    <ellipse cx="287" cy="150" rx="18" ry="36" transform="rotate(10 287 150)"/>
+    <path d="M256 286C212 286 178 318 178 358C178 397 212 430 256 430C300 430 334 397 334 358C334 318 300 286 256 286Z"/>
+  </g>
+</svg>

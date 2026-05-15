@@ -1,0 +1,317 @@
+/* Footer.css */
+
+
+.footer {
+  background: #b6cfc0;
+  color: #2F3E46;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 60px 5% 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Logo ve Hakkımızda Bölümü */
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 14px;
+}
+
+.footer-brand-logo {
+  width: 92px;
+  max-width: 24vw;
+  height: auto;
+  display: block;
+}
+
+.footer-brand-text h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #2F3E46;
+}
+
+.footer-brand-text p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(47, 62, 70, 0.75);
+}
+
+.footer-logo {
+  font-size: 30px;
+  color: #fff;
+  margin-right: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about h3 {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.about-text {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.mission-statement {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 15px;
+  border-radius: 30px;
+  margin-top: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mission-icon {
+  color: #ff9d42;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Bölüm Başlıkları */
+.footer-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 40px;
+  background: #ff9d42;
+  border-radius: 3px;
+}
+
+/* Linkler */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a, 
+.footer-section ul li {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.link-icon {
+  margin-right: 8px;
+  font-size: 14px;
+  color: #ff9d42;
+}
+
+/* İletişim Bilgileri */
+.contact-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-icon {
+  margin-right: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+/* Sosyal Medya */
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: #fff;
+  padding: 10px;
+}
+
+.social-icon:hover {
+  background: #ff9d42;
+  transform: translateY(-3px);
+}
+
+/* Güven Rozetleri */
+.trust-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.badge-icon {
+  margin-right: 10px;
+  color: #ff9d42;
+}
+
+/* Alt Kısım */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 5%;
+  background: rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 2;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.legal-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.legal-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+  color: #ff9d42;
+}
+
+/* Mobil Duyarlı Tasarım */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-container {
+    align-items: flex-start;
+  }
+
+  .footer-brand-logo {
+    width: 78px;
+  }
+
+  .footer-brand-text h3 {
+    font-size: 20px;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .legal-links {
+    justify-content: center;
+  }
+}
+
+/* Pati İzleri Animasyonu */
+@keyframes pawFloat {
+  0% { opacity: 0; transform: translateY(0) rotate(0deg); }
+  50% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateY(-100px) rotate(10deg); }
+}
+
+.footer::after {
+  content: '🐾';
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  animation: pawFloat 15s infinite linear;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.footer::before {
+  content: '🐾';
+  position: absolute;
+  bottom: 60px;
+  left: 30px;
+  font-size: 20px;
+  animation: pawFloat 18s infinite linear;
+  animation-delay: 5s;
+  opacity: 0.3;
+  z-index: 1;
+}
