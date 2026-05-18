@@ -35,21 +35,24 @@ const Register = ({ onClose, onLoginClick }) => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:7001/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
+      const response = await fetch(
+        "https://hayvan-sahiplendirme-backend.vercel.app/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            surname: formData.surname,
+            email: formData.email,
+            phone: formData.phone,
+            password: formData.password,
+          }),
+          credentials: "include", // Oturum yönetimi için gerekli olabilir
         },
-        body: JSON.stringify({
-          name: formData.name,
-          surname: formData.surname,
-          email: formData.email,
-          phone: formData.phone,
-          password: formData.password,
-        }),
-        credentials: "include", // Oturum yönetimi için gerekli olabilir
-      });
+      );
 
       const data = await response.json();
 
